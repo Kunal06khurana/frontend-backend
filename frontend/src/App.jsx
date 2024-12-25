@@ -6,7 +6,9 @@ import axios from 'axios'
 function App() {
   const [jokes,setjokes]=useState([]);
   useEffect(()=>{
-    axios.get('https://frontend-backend-2-ped9.onrender.com/api/jokes').then((res)=>setjokes(res.data));
+    const API_URL = import.meta.env.VITE_API_URL;
+
+    axios.get(`${API_URL}/api/jokes`).then((res)=>setjokes(res.data));
 
   },[])
 
