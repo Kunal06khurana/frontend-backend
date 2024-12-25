@@ -4,9 +4,9 @@ import cors from 'cors'
 
 const app=express();
 app.use(cors({
-    origin: ['http://localhost:5173', 'frontend-backend-blond.vercel.app'], // Add all allowed frontend URLs
+    origin: ['http://localhost:5173', 'https://frontend-backend-blond.vercel.app'], // Ensure the correct URL with protocol
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
-    credentials: true, // Enable cookies and authentication headers if needed
+    credentials: true // Support for cookies and authentication headers
   }));
 
 
